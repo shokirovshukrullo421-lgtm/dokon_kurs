@@ -3,6 +3,7 @@ import csv
 from config.menus import *
 from functions.admin_main import *
 from functions.admin_functions import *
+from functions.user_main import *
 USER_FILE="config/user_data.csv"
 USER_DATA = config("USER_FILE")
 
@@ -31,6 +32,7 @@ def login():
         for row in reader:
             if row["login"] == login and row["parol"] == parol:
                 print(f"✅ Xush kelibsiz {row['ism']}")
+                user_panel()
                 return
 
     print("❌ Login yoki parol xato")

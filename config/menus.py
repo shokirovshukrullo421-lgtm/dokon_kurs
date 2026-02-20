@@ -6,10 +6,9 @@ auth_menu="""
 admin_menu="""
 1.Mahsulot qo'shish
 2.Mahsulotlarni ko'rish
-3.Mahsulotlarni tahrirlash
-4.Mahsulotlarni o'chirish
-5.userlarni ko'rish
-6.Chiqish
+3.Mahsulotlarni o'chirish
+4.userlarni ko'rish
+5.Chiqish
 """
 user_menu="""
 1.Mahsulotlarni ko'rish

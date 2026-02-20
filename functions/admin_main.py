@@ -5,16 +5,14 @@ def admin_panel():
         print(admin_menu)
         choice=input("tanlang")
         if choice=="1":
-            mahsulot_qoshish()
+            mahsulot_qoshis()
         elif choice=="2":
-            pass
+            barcha_mahsulotla()
         elif choice=="3":
-            pass
+            mahsulot_ochirish()
         elif choice=="4":
-            pass
+            userlarni_korish()
         elif choice=="5":
-            pass
-        elif choice=="6":
             print("Admin panelidan chiqildi")
             break
         else:
