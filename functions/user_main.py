@@ -1,29 +1,27 @@
-from functions.admin_functions import *
-from config.menus import *
 from functions.users_functions import *
-def user_panel():
-    while True :
+from config.menus import *
+def user_panel(login):
+    cart = []
+
+    while True:
         print(user_menu)
-        choice=input("tanlang")
-        if choice=="1":
-            mahsulot_qoshish()
-        elif choice=="2":
-            while True:
-                mahsulot_qoshish()
-                print("yana qoshasizmi: ha/yoq")
-                tanlash=input("tanlang:\n")
-                if tanlash=="ha":
-                    return
-                elif tanlash=="yoq":
-                    break
-                else:
-                    print("cato tanlov")
-        elif choice=="3":
-            pass
-        elif choice=="4":
-            pass
-        elif choice=="5":
-            pass
+        tanlov = input("Tanlang: ")
+
+        if tanlov == "1":
+            mahsulotlarni_korish()
+
+        elif tanlov == "2":
+            savatga_qoshish(cart)
+
+        elif tanlov == "3":
+            savatni_korish(login, cart)
+
+        elif tanlov == "4":
+            savatni_tahrirlash(cart)
+
+        elif tanlov == "5":
+            print("👋 Chiqdingiz")
             break
+
         else:
-            print("xato tanlov")
+            print("❌ Noto‘g‘ri tanlov")

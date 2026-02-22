@@ -32,7 +32,8 @@ def login():
         for row in reader:
             if row["login"] == login and row["parol"] == parol:
                 print(f"✅ Xush kelibsiz {row['ism']}")
-                user_panel()
+                
+                user_panel(login)
                 return
 
     print("❌ Login yoki parol xato")

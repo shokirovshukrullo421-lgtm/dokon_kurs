@@ -13,6 +13,9 @@ def admin_panel():
         elif choice=="4":
             userlarni_korish()
         elif choice=="5":
+            xarid_tarixi()
+            
+        elif choice=="6":
             print("Admin panelidan chiqildi")
             break
         else:

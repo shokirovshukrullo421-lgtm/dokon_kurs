@@ -1,5 +1,7 @@
 import csv
 from decouple import config
+import ast
+DATA = "config/data.csv"
 FILE="config/products.csv"
 USER_FILE="config/user_data.csv"
 def mahsulot_qoshis():
@@ -61,4 +63,37 @@ def userlarni_korish():
         for i in oqi:
             count+=1
             print(f"{count}. {i["ism"]}  {i["login"]}  {i["parol"]}")
-        
+def xarid_tarixi():
+    try:
+        with open(DATA, "r", newline="", encoding="utf-8") as file:
+            data = list(csv.DictReader(file))
+    except FileNotFoundError:
+        print("❌ Xarid tarixi mavjud emas")
+        return
+
+    if not data:
+        print("❌ Hali hech kim xarid qilmagan")
+        return
+
+    print("\n" + "="*50)
+    print("🛒 XARID TARIXI")
+    print("="*50)
+
+    for row in data:
+        print(f"\n👤 Login: {row['login']}")
+        print("-"*40)
+
+        try:
+            royxat = ast.literal_eval(row["royxat"])
+        except:
+            print("❌ Royxat o‘qilmadi")
+            continue
+
+        for item in royxat:
+            # item = [name, quantity, price]
+            print(f"📦 {item[0]} | {item[1]} ta | {item[2]} so'm")
+
+        print(f"💰 Jami: {row['total_price']} so'm")
+        print("-"*40)
+
+    print("="*50)

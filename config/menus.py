@@ -8,13 +8,13 @@ admin_menu="""
 2.Mahsulotlarni ko'rish
 3.Mahsulotlarni o'chirish
 4.userlarni ko'rish
-5.Chiqish
+5.xarid tarixi
+6.chiqish
 """
 user_menu="""
 1.Mahsulotlarni ko'rish
 2. Savatga mahsulot qo'shish
 3. Savatni ko'rish
 4. Savatni tahrirlash
-5. To'lov qilish
 5.chiqish
 """
